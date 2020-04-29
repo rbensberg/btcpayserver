@@ -56,7 +56,7 @@ namespace BTCPayServer
 
             Add(new ElementsBTCPayNetwork()
             {
-                CryptoCode = "STIK",
+                CryptoCode = "AUDL",
                 NetworkCryptoCode = "LBTC",
                 ShowSyncSummary = false,
                 DefaultRateRules = new[]
@@ -66,7 +66,7 @@ namespace BTCPayServer
                     "STIK_BTC = 3 * bitpay(USD_BTC)"
                 },
                 Divisibility = 8,
-                AssetId = new uint256("aa775044c32a7df391902b3659f46dfe004ccb2644ce2ddc7dba31e889391caf"),
+                AssetId = new uint256("f59c5f3e8141f322276daa63ed5f307085808aea6d4ef9ba61e28154533fdec7"),
                 DisplayName = "Sticker Token",
                 BlockExplorerLink = NetworkType == NetworkType.Mainnet ? "https://blockstream.info/liquid/tx/{0}" : "https://blockstream.info/testnet/liquid/tx/{0}",
                 NBXplorerNetwork = nbxplorerNetwork,
