@@ -41,13 +41,37 @@ namespace BTCPayServer
                     "HOOD_X = HOOD_BTC * BTC_X",
                     "HOOD_BTC = 25 * bitpay(USD_BTC)"
                 },
-                Divisibility = 2,
+                Divisibility = 8,
                 AssetId = new uint256("aa775044c32a7df391902b3659f46dfe004ccb2644ce2ddc7dba31e889391caf"),
-                DisplayName = "Ethiopian Birr",
+                DisplayName = "Hoodie Token",
                 BlockExplorerLink = NetworkType == NetworkType.Mainnet ? "https://blockstream.info/liquid/tx/{0}" : "https://blockstream.info/testnet/liquid/tx/{0}",
                 NBXplorerNetwork = nbxplorerNetwork,
                 UriScheme = "liquidnetwork",
                 CryptoImagePath = "imlegacy/hood.png",
+                DefaultSettings = BTCPayDefaultSettings.GetDefaultSettings(NetworkType),
+                CoinType = NetworkType == NetworkType.Mainnet ? new KeyPath("1776'") : new KeyPath("1'"),
+                SupportRBF = true,
+                SupportLightning = false
+            });
+
+            Add(new ElementsBTCPayNetwork()
+            {
+                CryptoCode = "STIK",
+                NetworkCryptoCode = "LBTC",
+                ShowSyncSummary = false,
+                DefaultRateRules = new[]
+                {
+                    "STIK_USD = 3",
+                    "STIK_X = STIK_BTC * BTC_X",
+                    "STIK_BTC = 3 * bitpay(USD_BTC)"
+                },
+                Divisibility = 8,
+                AssetId = new uint256("aa775044c32a7df391902b3659f46dfe004ccb2644ce2ddc7dba31e889391caf"),
+                DisplayName = "Sticker Token",
+                BlockExplorerLink = NetworkType == NetworkType.Mainnet ? "https://blockstream.info/liquid/tx/{0}" : "https://blockstream.info/testnet/liquid/tx/{0}",
+                NBXplorerNetwork = nbxplorerNetwork,
+                UriScheme = "liquidnetwork",
+                CryptoImagePath = "imlegacy/stikers.png",
                 DefaultSettings = BTCPayDefaultSettings.GetDefaultSettings(NetworkType),
                 CoinType = NetworkType == NetworkType.Mainnet ? new KeyPath("1776'") : new KeyPath("1'"),
                 SupportRBF = true,
